@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 const Nav = () => {
   const path = usePathname();
   return (
-    <div className="hidden sm:flex items-center gap-x-8 ">
+    <div className="hidden sm:flex items-center gap-x-8 px-8">
       {NAVLINKS.map((link, index) => {
         return (
           <Link

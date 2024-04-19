@@ -12,7 +12,7 @@ const Header = ({}: {}) => {
       transition={{ type: "tween" }}
       className="flex justify-between p-4 items-center h-14"
     >
-      <Logo title="Luke Storti Dev" />
+      <Logo title="Luke Storti Dev" titleStyles="font-poppins text-lg font-medium" />
       <div className="flex gap-x-2 items-center">
         <Nav />
         <MobileNav />
