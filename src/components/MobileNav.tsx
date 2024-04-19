@@ -4,7 +4,6 @@ import { Menu } from "lucide-react";
 import Logo from "./Logo";
 import { NAVLINKS } from "@/constants";
 import Link from "next/link";
-import { ModeToggle } from "./mode-toggle";
 
 const MobileNav = () => {
   return (
@@ -31,7 +30,6 @@ const MobileNav = () => {
                 </SheetClose>
               );
             })}
-            <ModeToggle />
           </div>
         </SheetContent>
       </Sheet>

@@ -1,6 +1,6 @@
 "use client";
 import { NAVLINKS } from "@/constants";
-import { ModeToggle } from "./mode-toggle";
+
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 const Nav = () => {
   const path = usePathname();
   return (
-    <div className="hidden sm:flex items-center gap-x-8">
+    <div className="hidden sm:flex items-center gap-x-8 ">
       {NAVLINKS.map((link, index) => {
         return (
           <Link
@@ -29,7 +29,6 @@ const Nav = () => {
           </Link>
         );
       })}
-      <ModeToggle />
     </div>
   );
 };
