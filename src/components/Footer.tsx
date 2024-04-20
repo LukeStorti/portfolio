@@ -4,14 +4,14 @@ import Logo from "./Logo";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary py-8 px-8">
-      <div className="container mx-auto flex  justify-between">
+    <footer className="bg-secondary py-8 px-8 w-full">
+      <div className="flex justify-between">
         <Logo
           title="Copyright 2024 ©"
           titleStyles="font-poppins text-xs font-medium"
           iconSize={15}
         />
-        <div className="flex items-center gap-x-4">
+        <div className="hidden sm:flex items-center gap-x-4">
           <Link href="https://github.com/LukeStorti" target="_blank">
             <Github />
           </Link>
@@ -23,6 +23,9 @@ const Footer = () => {
           </Link>
         </div>
       </div>
+      <a href="https://storyset.com/profile" className="font-poppins text-xs px-8">
+        Profile illustrations by Storyset
+      </a>
     </footer>
   );
 };

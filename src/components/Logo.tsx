@@ -10,7 +10,7 @@ const Logo = ({
   iconSize?: number;
 }) => {
   return (
-    <Link href="/" className="flex items-center space-x-2">
+    <Link href="/" className="flex items-center space-x-2 px-2 w-auto ">
       <Code size={iconSize} />
       <h1 className={titleStyles}>{title}</h1>
       <Code2 size={iconSize} />

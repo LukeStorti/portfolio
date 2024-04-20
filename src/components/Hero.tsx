@@ -4,6 +4,7 @@ import Link from "next/link";
 import Avatar from "./Avatar";
 
 import Skills from "./Skills";
+import { buttonVariants } from "./ui/button";
 
 const Hero = () => {
   return (
@@ -15,17 +16,20 @@ const Hero = () => {
             Hi, I'm Luke. A passionate Front-End Developer based in South Africa 📍
           </p>
           <div className="flex space-x-2 items-center">
-            <Link href="https://github.com/LukeStorti" target="_blank" style={{ width: "30px" }}>
+            <Link
+              href="https://github.com/LukeStorti"
+              target="_blank"
+              className={buttonVariants({ variant: "outline" })}
+            >
               <Github />
             </Link>
-            <Link href="/contact" style={{ width: "30px" }}>
+            <Link href="/contact" className={buttonVariants({ variant: "outline" })}>
               <Send />
             </Link>
           </div>
         </div>
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col items-center space-y-2">
           <Avatar />
-          <Skills />
         </div>
       </div>
     </section>

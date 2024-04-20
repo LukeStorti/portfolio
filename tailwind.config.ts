@@ -1,4 +1,3 @@
-import { Poppins } from "next/font/google";
 import type { Config } from "tailwindcss";
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
@@ -19,7 +18,12 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        xs: "480px",
+        ss: "620px",
+        sm: "768px",
+        md: "1060px",
+        lg: "1200px",
+        xl: "1700px",
       },
     },
     extend: {
@@ -79,6 +83,10 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      backgroundImage: {
+        about_shape: "url(/images/blob.svg)",
+        about_shape2: "url(/images/blob2.svg)",
       },
     },
   },

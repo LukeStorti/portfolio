@@ -2,13 +2,13 @@ import Image from "next/image";
 
 const Avatar = () => {
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center rounded-full border-primary border-4">
       <Image
         src="/images/pp.jpg"
+        width={200}
+        height={200}
         alt="profile picture"
-        width={250}
-        height={250}
-        className="rounded-full border-primary border-4"
+        className="object-cover rounded-full"
       />
     </div>
   );
