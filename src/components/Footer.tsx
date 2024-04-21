@@ -23,7 +23,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <a href="https://storyset.com/profile" className="font-poppins text-xs px-8">
+      <a href="https://storyset.com/profile" className="font-poppins text-xs px-8 text-secondary">
         Profile illustrations by Storyset
       </a>
     </footer>

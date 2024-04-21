@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
 
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -20,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("min-h-screen bg-background dark:bg-black font-sans antialiased")}>
+      <body className={cn("min-h-screen bg-background dark:bg-black font-sans antialiased ")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -29,6 +30,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <Toaster />
           <Footer />
         </ThemeProvider>
       </body>

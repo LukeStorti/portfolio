@@ -19,10 +19,9 @@ const MobileNav = () => {
           <div className="flex flex-col gap-y-8 mt-4 justify-center items-center">
             {NAVLINKS.map((link, index) => {
               return (
-                <SheetClose asChild>
+                <SheetClose asChild key={index}>
                   <Link
                     href={link.path}
-                    key={index}
                     className="capitalize font-poppins relative hover:text-primary transition-all"
                   >
                     {link.name}

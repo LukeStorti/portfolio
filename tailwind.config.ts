@@ -84,10 +84,6 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      backgroundImage: {
-        about_shape: "url(/images/blob.svg)",
-        about_shape2: "url(/images/blob2.svg)",
-      },
     },
   },
   plugins: [require("tailwindcss-animate")],
