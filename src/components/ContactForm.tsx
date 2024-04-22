@@ -7,7 +7,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { toast } from "./ui/use-toast";
-import { ToastAction } from "./ui/toast";
+import emailjs from "@emailjs/browser";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }).max(50),
@@ -15,10 +15,17 @@ const formSchema = z.object({
     .string()
     .min(2, { message: "Enter a valid email address" })
     .email({ message: "Enter a valid email address" }),
-  message: z.string().max(200, { message: "Message must not be longer than 200 characters" }),
+  message: z
+    .string()
+    .min(1, { message: "Message must not be empty" })
+    .max(200, { message: "Message must not be longer than 200 characters" }),
 });
 
 export function ContactForm() {
+  const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
+  const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+  const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY;
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -29,23 +36,41 @@ export function ContactForm() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    toast({
-      title: "Success!",
-      description: <span className=" font-poppins">I'll get back to you as soon as possible!</span>,
-    });
+    const templateParams = {
+      from_name: values.name,
+      from_email: values.email,
+      to_name: "Luke",
+      message: values.message,
+    };
+
+    emailjs
+      .send(SERVICE_ID!, TEMPLATE_ID!, templateParams, PUBLIC_KEY)
+      .then((response) => {
+        console.log(response);
+        toast({
+          title: "Success!",
+          description: (
+            <span className=" font-poppins">I'll get back to you as soon as possible!</span>
+          ),
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+        toast({
+          title: "Oops!",
+          description: (
+            <span className=" font-poppins">Something went wrong, please try again later.</span>
+          ),
+        });
+      });
+
     form.reset();
   }
 
   return (
-    <div className="w-full px-2 sm:px-20 rounded bg-secondary py-6 shadow-md">
+    <div className="w-full px-2 sm:px-20 rounded py-6 ">
       <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-4"
-          action="https://formsubmit.co/lukestorti@gmail.com"
-          method="POST"
-          target="_blank"
-        >
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <FormField
             control={form.control}
             name="name"

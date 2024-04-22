@@ -17,13 +17,13 @@ const Work = () => {
           <h2 className="font-poppins text-3xl font-bold">Projects</h2>
           <Dot size={45} className="text-primary" />
         </div>
-        <div className="my-12 px-4 flex flex-col-reverse sm:flex-row justify-center sm:justify-evenly items-center sm:items-start w-full gap-4">
+        <div className="my-12 px-4 flex flex-col-reverse sm:flex-row justify-center sm:justify-evenly items-center sm:items-start w-full gap-4 ">
           <Carousel
             opts={{ loop: true }}
             plugins={[Autoplay({ delay: 9000, stopOnInteraction: true })]}
-            className="px-2 flex items-center justify-center"
+            className="px-2 flex items-center justify-center "
           >
-            <CarouselContent>
+            <CarouselContent className="w-[358px]">
               <CarouselItem>
                 <Card className="w-[340px]">
                   <CardContent>
