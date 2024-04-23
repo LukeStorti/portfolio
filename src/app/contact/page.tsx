@@ -1,14 +1,18 @@
 import { ContactForm } from "@/components/ContactForm";
-import Image from "next/image";
-
 const Contact = () => {
   return (
     <section className="my-12 px-4">
-      <div className="container mx-auto">
-        <h2 className="font-poppins text-4xl my-2">Questions?</h2>
-        <p className="font-poppins">Lets connect</p>
-        <div className="flex flex-col-reverse lg:flex-row justify-between items-center">
-          <Image src="/images/Contact.png" alt="contact image" width={350} height={300} />
+      <div className="container mx-auto h-[80vh]">
+        <h2 className=" text-4xl my-2">Questions?</h2>
+        <p className="">Lets connect</p>
+        <div className="flex flex-col-reverse lg:flex-row justify-between items-center my-8 ">
+          <img
+            src="/images/Contact.png"
+            alt="contact image"
+            width={350}
+            height={300}
+            className="hidden lg:block"
+          />
           <ContactForm />
         </div>
       </div>

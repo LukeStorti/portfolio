@@ -22,7 +22,7 @@ const MobileNav = () => {
                 <SheetClose asChild key={index}>
                   <Link
                     href={link.path}
-                    className="capitalize font-poppins relative hover:text-primary transition-all"
+                    className="capitalize  relative hover:text-primary transition-all"
                   >
                     {link.name}
                   </Link>

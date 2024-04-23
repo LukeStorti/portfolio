@@ -14,7 +14,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 const AboutMeTabs = () => {
   return (
-    <Tabs className="font-poppins mt-14 w-[300px] sm:w-[400px]" defaultValue="personal">
+    <Tabs className=" mt-14 w-[300px] sm:w-[400px]" defaultValue="personal">
       <TabsList className="w-[300px] sm:w-[400px] space-x-4">
         <TabsTrigger value="personal">Personal</TabsTrigger>
         <TabsTrigger value="education">Education</TabsTrigger>
@@ -29,7 +29,7 @@ const AboutMeTabs = () => {
             <CarouselItem>
               <Card className=" h-[225px] flex items-center cursor-grab">
                 <CardContent>
-                  <div className="flex flex-col px-2 my-2">
+                  <div className="flex flex-col px-2 items-start space-y-2">
                     <p className="text-sm">
                       Before learning Web Development I was a music producer. I worked with artists
                       from all over the world and produced over 100 tracks, with over 300k+ streams.{" "}
@@ -47,7 +47,7 @@ const AboutMeTabs = () => {
             <CarouselItem>
               <Card className="h-[225px] flex items-center cursor-grab">
                 <CardContent>
-                  <div className="flex flex-col px-2 my-2">
+                  <div className="flex flex-col px-2 items-start space-y-2">
                     <p className="text-sm">
                       Besides Web Development & Music, I love animals and nature. If I won the
                       lottery I would adopt 100 dogs. Maybe some cats too, but definitely 100 dogs.
@@ -59,7 +59,7 @@ const AboutMeTabs = () => {
             <CarouselItem>
               <Card className="h-[225px] flex items-center cursor-grab">
                 <CardContent>
-                  <div className="flex flex-col px-2 my-2">
+                  <div className="flex flex-col px-2 items-start space-y-2">
                     <p className="text-sm">
                       I consider myself a creative person, I have a passion for trying new things.
                       Thats why I gravitated towards Web Development, because we get to create

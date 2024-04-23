@@ -14,7 +14,7 @@ const Nav = () => {
           <Link
             href={link.path}
             key={index}
-            className="capitalize font-poppins relative hover:text-primary transition-all"
+            className="capitalize  relative hover:text-primary transition-all"
           >
             {link.path === path && (
               <motion.span

@@ -49,18 +49,14 @@ export function ContactForm() {
         console.log(response);
         toast({
           title: "Success!",
-          description: (
-            <span className=" font-poppins">I'll get back to you as soon as possible!</span>
-          ),
+          description: <span className=" ">I'll get back to you as soon as possible!</span>,
         });
       })
       .catch((error) => {
         console.log(error);
         toast({
           title: "Oops!",
-          description: (
-            <span className=" font-poppins">Something went wrong, please try again later.</span>
-          ),
+          description: <span className=" ">Something went wrong, please try again later.</span>,
         });
       });
 
@@ -75,7 +71,7 @@ export function ContactForm() {
             control={form.control}
             name="name"
             render={({ field }) => (
-              <FormItem className="font-poppins">
+              <FormItem className="">
                 <FormLabel>Name</FormLabel>
                 <FormControl>
                   <Input placeholder="Name" {...field} />
@@ -88,7 +84,7 @@ export function ContactForm() {
             control={form.control}
             name="email"
             render={({ field }) => (
-              <FormItem className="font-poppins">
+              <FormItem className="">
                 <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input placeholder="Email" {...field} />
@@ -101,7 +97,7 @@ export function ContactForm() {
             control={form.control}
             name="message"
             render={({ field }) => (
-              <FormItem className="font-poppins">
+              <FormItem className="">
                 <FormLabel>Message</FormLabel>
                 <FormControl>
                   <Textarea
@@ -114,7 +110,7 @@ export function ContactForm() {
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full font-poppins">
+          <Button type="submit" className="w-full ">
             Send
           </Button>
         </form>

@@ -8,7 +8,7 @@ const AboutMe = () => {
       <div className="container flex flex-col items-center">
         <div className="flex items-center space-x-2">
           <Dot size={45} className="text-primary" />
-          <h2 className="font-poppins text-3xl font-bold">About me</h2>
+          <h2 className=" text-3xl font-bold">About me</h2>
 
           <Dot size={45} className="text-primary" />
         </div>

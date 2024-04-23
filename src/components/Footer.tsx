@@ -6,11 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-secondary py-8 px-8 w-full">
       <div className="flex justify-between">
-        <Logo
-          title="Copyright 2024 ©"
-          titleStyles="font-poppins text-xs font-medium"
-          iconSize={15}
-        />
+        <Logo title="Copyright 2024 ©" titleStyles=" text-xs font-medium" iconSize={15} />
         <div className="hidden sm:flex items-center gap-x-4">
           <Link href="https://github.com/LukeStorti" target="_blank">
             <Github />
@@ -23,11 +19,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <a
-        href="https://storyset.com/profile"
-        target="_blank"
-        className="font-poppins text-xs px-8 text-secondary"
-      >
+      <a href="https://storyset.com/profile" target="_blank" className=" text-xs px-8 ">
         Profile illustrations by Storyset
       </a>
     </footer>
