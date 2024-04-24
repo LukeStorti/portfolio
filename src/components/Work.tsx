@@ -12,9 +12,9 @@ import {
 import { Button } from "./ui/button";
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay";
-import { Card, CardContent } from "./ui/card";
 import { PROJECTDATA } from "@/constants";
 import ProjectCard from "./ProjectCard";
+import WorkImage from "./WorkImage";
 
 const Work = () => {
   return (
@@ -42,7 +42,10 @@ const Work = () => {
             <CarouselPrevious />
           </Carousel>
           <div className="flex flex-col">
-            <img src="/images/Coding.png" alt="hands coding" width={250} height={350} />
+            <div className="w-[250px] h-[250px]">
+              <WorkImage />
+            </div>
+
             <Button asChild className="">
               <Link href="/projects">View More</Link>
             </Button>

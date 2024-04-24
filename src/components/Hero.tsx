@@ -11,7 +11,7 @@ const Hero = () => {
     <section className="flex my-12">
       <div className="container flex flex-col-reverse md:flex-row items-center sm:items-start justify-evenly">
         <div className="flex flex-col space-y-4 w-full md:w-1/2 px-12 my-12">
-          <h2 className=" text-3xl font-medium">Hi, I'm Luke. 👋</h2>
+          <h2 className=" text-3xl font-medium">Hi, I&apos;m Luke. 👋</h2>
           <p className=" text-2xl">A passionate Front-End Developer based in South Africa 📍</p>
           <div className="flex space-x-2 items-center">
             <Link
