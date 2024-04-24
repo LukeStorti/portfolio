@@ -49,7 +49,7 @@ export function ContactForm() {
         console.log(response);
         toast({
           title: "Success!",
-          description: <span>I'll get back to you as soon as possible!</span>,
+          description: <span>I&apos;ll get back to you as soon as possible!</span>,
         });
       })
       .catch((error) => {

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Card, CardContent } from "./ui/card";
 import { Github, LinkIcon } from "lucide-react";
 import { buttonVariants } from "./ui/button";
+import Image from "next/image";
 
 const ProjectCard = ({
   key,
@@ -22,9 +23,11 @@ const ProjectCard = ({
     <Card>
       <CardContent className="flex flex-col justify-between items-center w-full h-full md:w-[340px] md:h-[420px]">
         <div className="w-full h-[200px] md:h-[300px]">
-          <img
+          <Image
             src={image}
             alt={`${title} thumbnail`}
+            width={200}
+            height={300}
             className="object-contain rounded-md w-full h-full"
           />
         </div>
@@ -37,6 +40,7 @@ const ProjectCard = ({
             <Link href={link} target="_blank" className={buttonVariants({ variant: "outline" })}>
               <LinkIcon />
             </Link>
+
             <Link href={github} target="_blank" className={buttonVariants({ variant: "outline" })}>
               <Github />
             </Link>
