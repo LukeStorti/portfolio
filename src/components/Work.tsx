@@ -38,8 +38,8 @@ const Work = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselNext />
-            <CarouselPrevious />
+            <CarouselNext className="hidden lg:block" />
+            <CarouselPrevious className="hidden lg:block" />
           </Carousel>
           <div className="flex flex-col">
             <div className="w-[250px] h-[250px]">
