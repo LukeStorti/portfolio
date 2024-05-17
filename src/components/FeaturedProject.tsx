@@ -15,7 +15,7 @@ const FeaturedProject = () => {
           title="Paws Animal Adoption"
           subtitle="A web app that connects animal adoption NPOs and people who are looking to adopt."
           github="https://github.com/LukeStorti/paws-animal-adoption"
-          link="https://paws-animal-adoption-zz8q.vercel.app/"
+          link="https://paws-animal-adoption.vercel.app"
         />
         <div className="flex flex-col space-y-2 items-start w-full md:w-1/2 my-4">
           <h3 className="text-2xl mt-2 font-semibold">Paws</h3>
