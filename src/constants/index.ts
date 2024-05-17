@@ -13,6 +13,14 @@ export const PROJECTDATA = [
     link: "https://fithubgymapp.netlify.app/",
     github: "https://github.com/LukeStorti/FitHub",
   },
+  {
+    id: 2,
+    title: "Trxvl",
+    image: "/images/trxvl.png",
+    subtitle: "A Travel Website",
+    link: "https://trxvl-theta.vercel.app",
+    github: "https://github.com/LukeStorti/trxvl",
+  },
 
   {
     id: 3,
