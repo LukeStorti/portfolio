@@ -36,13 +36,15 @@ const ProjectCard = ({
           <p className="text-center text-sm overflow-hidden">{subtitle}</p>
         </div>
         {link && github && (
-          <div className="flex justify-between w-full mt-4">
+          <div className="flex space-x-2 sm:space-x-4 mt-4">
             <Link href={link} target="_blank" className={buttonVariants({ variant: "outline" })}>
               <LinkIcon />
+              <p className="mx-2 text-xs">Live Link</p>
             </Link>
 
             <Link href={github} target="_blank" className={buttonVariants({ variant: "outline" })}>
               <Github />
+              <p className="mx-2 text-xs">Github</p>
             </Link>
           </div>
         )}

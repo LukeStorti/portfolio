@@ -5,6 +5,7 @@ import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
+  CarouselDots,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
@@ -29,7 +30,7 @@ const Work = () => {
           <Carousel
             opts={{ loop: true }}
             plugins={[Autoplay({ delay: 9000, stopOnInteraction: true })]}
-            className="px-2 flex items-center justify-center "
+            className="px-2 flex flex-col items-center justify-center "
           >
             <CarouselContent className="w-[358px]">
               {PROJECTDATA.map((item) => (
@@ -38,8 +39,9 @@ const Work = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselNext className="hidden lg:block" />
-            <CarouselPrevious className="hidden lg:block" />
+            <CarouselNext className="hidden lg:flex" />
+            <CarouselPrevious className="hidden lg:flex" />
+            <CarouselDots className="mt-2" />
           </Carousel>
           <div className="flex flex-col">
             <div className="w-[250px] h-[250px]">

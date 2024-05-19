@@ -9,7 +9,7 @@ import {
   VscodeIconsFileTypeTailwind,
 } from "./Skills";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
+import { Carousel, CarouselContent, CarouselDots, CarouselItem } from "./ui/carousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 const AboutMeTabs = () => {
@@ -71,6 +71,7 @@ const AboutMeTabs = () => {
               </Card>
             </CarouselItem>
           </CarouselContent>
+          <CarouselDots className="mt-2" />
         </Carousel>
       </TabsContent>
       <TabsContent value="education">
@@ -125,6 +126,7 @@ const AboutMeTabs = () => {
               </Card>
             </CarouselItem>
           </CarouselContent>
+          <CarouselDots className="mt-2" />
         </Carousel>
       </TabsContent>
       <TabsContent value="skills">
@@ -176,6 +178,7 @@ const AboutMeTabs = () => {
               </Card>
             </CarouselItem>
           </CarouselContent>
+          <CarouselDots className="mt-2" />
         </Carousel>
       </TabsContent>
     </Tabs>
