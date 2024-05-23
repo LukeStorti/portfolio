@@ -21,6 +21,14 @@ export const PROJECTDATA = [
     link: "https://trxvl-theta.vercel.app",
     github: "https://github.com/LukeStorti/trxvl",
   },
+  {
+    id: 7,
+    title: "UrbanBlend",
+    image: "/images/urbanblend.png",
+    subtitle: "A Fashion Ecom site",
+    link: "https://urbanblend.vercel.app/",
+    github: "https://github.com/LukeStorti/nextjs-ecom",
+  },
 
   {
     id: 3,
